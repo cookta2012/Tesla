@@ -20,4 +20,18 @@ public class BlockTeslaCoil extends BlockContainer {
 		return new TileEntityTeslaCoil();
 	}
 
+	@Override
+	public boolean isOpaqueCube() {
+		return false;
+	}
+	
+	@Override
+	public int getRenderType() {
+		return 110;
+	}
+	
+	@Override
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
 }
