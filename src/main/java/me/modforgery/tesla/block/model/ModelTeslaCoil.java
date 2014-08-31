@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 
 public class ModelTeslaCoil extends ModelBase
 {
+  //fields
     ModelRenderer top;
     ModelRenderer pole;
     ModelRenderer ring1;
@@ -13,31 +14,31 @@ public class ModelTeslaCoil extends ModelBase
   
   public ModelTeslaCoil()
   {
-    textureWidth = 64;
-    textureHeight = 32;
+    textureWidth = 128;
+    textureHeight = 64;
     
       top = new ModelRenderer(this, 0, 0);
       top.addBox(0F, 0F, 0F, 12, 4, 12);
       top.setRotationPoint(-6F, 8F, -6F);
-      top.setTextureSize(64, 32);
+      top.setTextureSize(128, 64);
       top.mirror = true;
       setRotation(top, 0F, 0F, 0F);
-      pole = new ModelRenderer(this, 0, 0);
+      pole = new ModelRenderer(this, 0, 16);
       pole.addBox(0F, 0F, 0F, 6, 12, 6);
       pole.setRotationPoint(-3F, 12F, -3F);
-      pole.setTextureSize(64, 32);
+      pole.setTextureSize(128, 64);
       pole.mirror = true;
       setRotation(pole, 0F, 0F, 0F);
-      ring1 = new ModelRenderer(this, 0, 0);
+      ring1 = new ModelRenderer(this, 24, 16);
       ring1.addBox(0F, 0F, 0F, 10, 1, 10);
       ring1.setRotationPoint(-5F, 19F, -5F);
-      ring1.setTextureSize(64, 32);
+      ring1.setTextureSize(128, 64);
       ring1.mirror = true;
       setRotation(ring1, 0F, 0F, 0F);
-      ring2 = new ModelRenderer(this, 0, 0);
+      ring2 = new ModelRenderer(this, 24, 16);
       ring2.addBox(0F, 0F, 0F, 10, 1, 10);
       ring2.setRotationPoint(-5F, 21F, -5F);
-      ring2.setTextureSize(64, 32);
+      ring2.setTextureSize(128, 64);
       ring2.mirror = true;
       setRotation(ring2, 0F, 0F, 0F);
   }
