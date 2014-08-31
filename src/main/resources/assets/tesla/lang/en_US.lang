@@ -1,6 +1,5 @@
 tile.vdgGenerator.name=Van De Graaff Generator
 tile.teslaCoil.name=Tesla Coil
+tile.plasmaFurnace.name=Plasma Furnace
 item.tpDevice.name=Tesla Pairing Device
 item.tVoltmeter.name=Tesla Voltmeter
-item.coil.name=Coil
-itemGroup.tesla=Tesla
