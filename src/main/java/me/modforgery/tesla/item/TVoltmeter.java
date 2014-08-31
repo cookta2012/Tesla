@@ -1,6 +1,6 @@
 package me.modforgery.tesla.item;
 
-import net.minecraft.creativetab.CreativeTabs;
+import me.modforgery.tesla.CreativeTabTesla;
 import net.minecraft.item.Item;
 
 /**
@@ -11,7 +11,7 @@ public class TVoltmeter extends Item
     public TVoltmeter()
     {
         super();
-        setCreativeTab(CreativeTabs.tabRedstone);
+        setCreativeTab(CreativeTabTesla.TS_TAB);
         setUnlocalizedName("tVoltmeter");
         setTextureName("tesla:tvoltmeter");
         setMaxStackSize(1);
