@@ -1,5 +1,6 @@
 package me.modforgery.tesla.block;
 
+import me.modforgery.tesla.CreativeTabTesla;
 import me.modforgery.tesla.block.te.TileEntityVDGGenerator;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -12,7 +13,7 @@ public class BlockVDGGenerator extends BlockContainer {
 	public BlockVDGGenerator() {
 		super(Material.iron);
 		setBlockName("vdgGenerator");
-		setCreativeTab(CreativeTabs.tabRedstone);
+		setCreativeTab(CreativeTabTesla.TS_TAB);
 	}
 
 	@Override

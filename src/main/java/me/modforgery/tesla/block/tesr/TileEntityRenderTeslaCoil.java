@@ -1,15 +1,13 @@
 package me.modforgery.tesla.block.tesr;
 
-import org.lwjgl.opengl.GL11;
-
-import robomuss.rc.block.model.ModelTrackFabricator;
-import robomuss.rc.block.te.TileEntityTrackFabricator;
 import me.modforgery.tesla.block.model.ModelTeslaCoil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+
+import org.lwjgl.opengl.GL11;
 
 public class TileEntityRenderTeslaCoil extends TileEntitySpecialRenderer {
 
@@ -22,11 +20,13 @@ public class TileEntityRenderTeslaCoil extends TileEntitySpecialRenderer {
 
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 
+		GL11.glPushMatrix();
 		GL11.glRotatef(180, 1, 0, 0);
 		ModelTeslaCoil model = new ModelTeslaCoil();
 		
 		model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 
+		GL11.glPopMatrix();
 		GL11.glPopMatrix();
 	}
 

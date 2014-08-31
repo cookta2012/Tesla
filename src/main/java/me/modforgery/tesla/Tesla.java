@@ -8,6 +8,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import me.modforgery.tesla.init.TeslaBlocks;
 import me.modforgery.tesla.init.TeslaItems;
 import me.modforgery.tesla.init.TeslaRecipes;
+import me.modforgery.tesla.proxy.ClientProxy;
 import me.modforgery.tesla.proxy.IProxy;
 import me.modforgery.tesla.reference.Reference;
 
@@ -24,7 +25,7 @@ public class Tesla
     @Mod.EventHandler
     public static void preInit(FMLPreInitializationEvent event)
     {
-
+    	proxy.initRenderers();
     }
 
     @Mod.EventHandler
