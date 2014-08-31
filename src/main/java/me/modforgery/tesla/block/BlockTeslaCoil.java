@@ -13,6 +13,7 @@ public class BlockTeslaCoil extends BlockContainer {
 		super(Material.iron);
 		setBlockName("teslaCoil");
 		setCreativeTab(CreativeTabTesla.TS_TAB);
+		setBlockBounds(0.125f, 0, 0.125f, 0.875f, 1, 0.875f);
 	}
 
 	@Override
