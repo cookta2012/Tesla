@@ -1,10 +1,11 @@
 package me.modforgery.tesla.init;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import me.modforgery.tesla.block.BlockTeslaCoil;
 import me.modforgery.tesla.block.BlockVDGGenerator;
+import me.modforgery.tesla.block.te.TileEntityTeslaCoil;
+import me.modforgery.tesla.block.te.TileEntityVDGGenerator;
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
  * File by ModForgery for Minecraft on 31/08/2014.
@@ -17,10 +18,13 @@ public class TeslaBlocks
 	
     public static void init()
     {
-    	vdgGenerator = new BlockVDGGenerator().setBlockName("vdgGenerator").setCreativeTab(CreativeTabs.tabRedstone);
-    	teslaCoil = new BlockTeslaCoil().setBlockName("teslaCoil").setCreativeTab(CreativeTabs.tabRedstone);
+    	vdgGenerator = new BlockVDGGenerator();
+    	teslaCoil = new BlockTeslaCoil();
     	
     	GameRegistry.registerBlock(vdgGenerator, "vdgGenerator");
     	GameRegistry.registerBlock(teslaCoil, "teslaCoil");
+    	
+    	GameRegistry.registerTileEntity(TileEntityVDGGenerator.class, "te_vdgGenerator");
+    	GameRegistry.registerTileEntity(TileEntityTeslaCoil.class, "te_teslaCoil");
     }
 }
