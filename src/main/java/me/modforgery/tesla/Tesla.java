@@ -7,14 +7,15 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+import cpw.mods.fml.common.registry.GameRegistry;
 import me.modforgery.tesla.gui.Handler;
 import me.modforgery.tesla.init.TeslaBlocks;
 import me.modforgery.tesla.init.TeslaItems;
 import me.modforgery.tesla.init.TeslaPackets;
 import me.modforgery.tesla.init.TeslaRecipes;
-import me.modforgery.tesla.proxy.ClientProxy;
 import me.modforgery.tesla.proxy.IProxy;
 import me.modforgery.tesla.reference.Reference;
+import me.modforgery.tesla.worldgen.WorldGenerator;
 
 /**
  * File by ModForgery for Tesla on 31/08/2014.
@@ -46,6 +47,7 @@ public class Tesla
         TeslaPackets.init();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(instance(), new Handler());
+        GameRegistry.registerWorldGenerator(new WorldGenerator(), 1);
     }
 
     @Mod.EventHandler
