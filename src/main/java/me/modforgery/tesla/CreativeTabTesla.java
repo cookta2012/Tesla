@@ -8,8 +8,10 @@ import net.minecraft.item.Item;
 /**
  * Created by Rushmead For Tesla
  */
-public class CreativeTabTesla {
-    public static final CreativeTabs TS_TAB = new CreativeTabs(Reference.modid.toLowerCase()) {
+public class CreativeTabTesla
+{
+    public static final CreativeTabs TS_TAB = new CreativeTabs(Reference.modid.toLowerCase())
+    {
         @Override
         public Item getTabIconItem() {
             return TeslaItems.tp_device;

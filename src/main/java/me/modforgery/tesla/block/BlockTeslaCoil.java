@@ -2,12 +2,14 @@ package me.modforgery.tesla.block;
 
 import me.modforgery.tesla.CreativeTabTesla;
 import me.modforgery.tesla.block.te.TileEntityTeslaCoil;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
-public class BlockTeslaCoil extends BlockContainer {
+public class BlockTeslaCoil extends Block implements ITileEntityProvider {
 
 	public BlockTeslaCoil() {
 		super(Material.iron);
