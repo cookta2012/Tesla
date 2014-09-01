@@ -16,6 +16,13 @@ public class CreativeTabTesla
         public Item getTabIconItem() {
             return TeslaItems.tp_device;
         }
-    };
+
+        @Override
+        public boolean hasSearchBar() {
+            return true;
+        }
+
+        ;
+    }.setBackgroundImageName("item_search.png");
 
 }
