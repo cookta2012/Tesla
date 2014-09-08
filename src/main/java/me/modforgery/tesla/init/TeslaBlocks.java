@@ -1,6 +1,7 @@
 package me.modforgery.tesla.init;
 
 import me.modforgery.tesla.block.*;
+import me.modforgery.tesla.block.te.TileEntityPlasmaFurnace;
 import me.modforgery.tesla.block.te.TileEntityTeslaCoil;
 import me.modforgery.tesla.block.te.TileEntityVDGGenerator;
 import net.minecraft.block.Block;
@@ -38,6 +39,7 @@ public class TeslaBlocks
 
     	GameRegistry.registerTileEntity(TileEntityVDGGenerator.class, "te_vdgGenerator");
     	GameRegistry.registerTileEntity(TileEntityTeslaCoil.class, "te_teslaCoil");
+        GameRegistry.registerTileEntity(TileEntityPlasmaFurnace.class, "te_plasmaFurnace");
 
         OreDictionary.registerOre("oreCopper", oreCopper);
 
