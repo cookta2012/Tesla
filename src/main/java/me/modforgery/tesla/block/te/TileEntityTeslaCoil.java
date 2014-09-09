@@ -3,13 +3,21 @@ package me.modforgery.tesla.block.te;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import me.modforgery.tesla.api.power.IPoweredTile;
+import me.modforgery.tesla.api.power.PoweredTile;
 import me.modforgery.tesla.client.particles.TeslaParticles;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityTeslaCoil extends TileEntity {
+public class TileEntityTeslaCoil extends TileEntity implements IPoweredTile {
 
     public static int scanRadius = 6;
     public int ticks = 0;
+
+    //This is the powered tile instance
+    PoweredTile poweredTile;
+
+    public TileEntityTeslaCoil() {
+        poweredTile = new PoweredTile(10000);
+    }
 
     @Override
     public void updateEntity(){
@@ -19,10 +27,15 @@ public class TileEntityTeslaCoil extends TileEntity {
                 for (int z = -scanRadius; z < scanRadius; z++) {
                    TileEntity tile = this.worldObj.getTileEntity(this.xCoord + x, this.yCoord + y, this.zCoord + z);
                    if(tile != null && tile instanceof IPoweredTile){
-                       if (FMLCommonHandler.instance().getSide() == Side.CLIENT){
-                           TeslaParticles.plasa(this.worldObj, this.xCoord + 0.5, this.yCoord + 0.3, this.zCoord + 0.5 , tile.xCoord + 0.5, tile.yCoord + 0.5, tile.zCoord + 0.5);
+                       if(tile instanceof TileEntityTeslaCoil){
+                           //TODO balace the power here
+                           //TODO Find out how meny it is connected to here
+                       }else {
+                           //TODO move the power here to all of the powered tiles
+                           if (FMLCommonHandler.instance().getSide() == Side.CLIENT){
+                               TeslaParticles.plasa(this.worldObj, this.xCoord + 0.5, this.yCoord + 0.3, this.zCoord + 0.5 , tile.xCoord + 0.5, tile.yCoord + 0.5, tile.zCoord + 0.5);
+                           }
                        }
-
                    }
                 }
             }
@@ -30,4 +43,8 @@ public class TileEntityTeslaCoil extends TileEntity {
 
     }
 
+    @Override
+    public PoweredTile getPoweredTile() {
+        return poweredTile;
+    }
 }
