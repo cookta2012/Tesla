@@ -8,9 +8,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import cpw.mods.fml.common.registry.GameRegistry;
+import me.modforgery.tesla.crossmod.TeslaCrossMod;
 import me.modforgery.tesla.gui.Handler;
 import me.modforgery.tesla.init.TeslaBlocks;
 import me.modforgery.tesla.init.TeslaItems;
+import me.modforgery.tesla.init.TeslaOreDictionary;
 import me.modforgery.tesla.init.TeslaPackets;
 import me.modforgery.tesla.init.TeslaRecipes;
 import me.modforgery.tesla.proxy.IProxy;
@@ -36,6 +38,7 @@ public class Tesla
     public static void preInit(FMLPreInitializationEvent event)
     {
     	proxy.initRenderers();
+    	TeslaCrossMod.preInit();
     }
 
     @Mod.EventHandler
@@ -48,12 +51,16 @@ public class Tesla
 
         NetworkRegistry.INSTANCE.registerGuiHandler(instance(), new Handler());
         GameRegistry.registerWorldGenerator(new WorldGenerator(), 1);
+        
+        TeslaCrossMod.init();
     }
 
     @Mod.EventHandler
     public static void postInit(FMLPostInitializationEvent event)
     {
+    	TeslaOreDictionary.init();
         TeslaRecipes.init();
+        TeslaCrossMod.postInit();
     }
 
     public static Tesla instance()
