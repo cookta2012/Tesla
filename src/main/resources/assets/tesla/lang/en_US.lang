@@ -1,11 +1,14 @@
+item.tpDevice.name=Tesla Pairing Device
+item.tVoltmeter.name=Tesla Voltmeter
+item.coil.name=Coil
+item.Conductor.name=Conductor
+item.copper_ingot.name=Copper Ingot
+
 tile.vdgGenerator.name=Van De Graaff Generator
 tile.teslaCoil.name=Tesla Coil
 tile.plasmaFurnace.name=Plasma Furnace
 tile.metalPlate.name=Metal Plate
 tile.oreCopper.name=Copper Ore
-item.tpDevice.name=Tesla Pairing Device
-item.tVoltmeter.name=Tesla Voltmeter
-item.coil.name=Coil
-item.Conductor.name=Conductor
+tile.teslaBase.name=Telsa Base
 
 itemGroup.tesla=Tesla

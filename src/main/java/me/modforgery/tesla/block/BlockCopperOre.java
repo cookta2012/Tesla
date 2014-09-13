@@ -14,5 +14,8 @@ public class BlockCopperOre extends Block {
         setBlockName("oreCopper");
         setBlockTextureName("tesla:copper_ore");
         setCreativeTab(CreativeTabTesla.TS_TAB);
+        setHardness(3.0F);
+        setResistance(5.0F);
+        setStepSound(soundTypePiston);
     }
 }
