@@ -1,11 +1,7 @@
 package me.modforgery.tesla.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import me.modforgery.tesla.item.Coil;
-import me.modforgery.tesla.item.Conductor;
-import me.modforgery.tesla.item.CopperIngot;
-import me.modforgery.tesla.item.TPDevice;
-import me.modforgery.tesla.item.TVoltmeter;
+import me.modforgery.tesla.item.*;
 import net.minecraft.item.Item;
 
 /**
@@ -18,6 +14,7 @@ public class TeslaItems
     public static Item conductor;
     public static Item coil;
     public static Item copper_ingot;
+    public static Item tin_ingot;
 
     public static void init()
     {
@@ -26,11 +23,14 @@ public class TeslaItems
         conductor = new Conductor();
         coil = new Coil();
         copper_ingot = new CopperIngot();
+        tin_ingot = new TinIngot();
 
         GameRegistry.registerItem(tp_device, "TPDevice");
         GameRegistry.registerItem(t_voltmeter, "TVoltmeter");
+        GameRegistry.registerItem(conductor, "Conductor");
         GameRegistry.registerItem(coil, "coil");
         GameRegistry.registerItem(copper_ingot, "copper_ingot");
+        GameRegistry.registerItem(tin_ingot, "tin_ingot");
     }
 
 }

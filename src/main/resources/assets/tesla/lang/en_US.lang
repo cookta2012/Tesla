@@ -3,6 +3,7 @@ item.tVoltmeter.name=Tesla Voltmeter
 item.coil.name=Coil
 item.Conductor.name=Conductor
 item.copper_ingot.name=Copper Ingot
+item.tin_ingot.name=Tin Ingot
 
 tile.vdgGenerator.name=Van De Graaff Generator
 tile.teslaCoil.name=Tesla Coil
@@ -10,5 +11,8 @@ tile.plasmaFurnace.name=Plasma Furnace
 tile.metalPlate.name=Metal Plate
 tile.oreCopper.name=Copper Ore
 tile.teslaBase.name=Telsa Base
+tile.oreTin.name=Tin Ore
+tile.blockCopper.name=Copper Block
+tile.blockTin.name=Tin Block
 
 itemGroup.tesla=Tesla

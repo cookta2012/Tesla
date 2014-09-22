@@ -20,6 +20,9 @@ public class TeslaBlocks
 	public static Block metalPlate;
     public static Block oreCopper;
     public static Block teslaBase;
+    public static Block oreTin;
+    public static Block blockCopper;
+    public static Block blockTin;
 	
     public static void init()
     {
@@ -29,6 +32,9 @@ public class TeslaBlocks
         metalPlate = new BlockDecorative("metalPlate");
         oreCopper = new BlockCopperOre();
         teslaBase = new BlockTeslaBase();
+        oreTin = new BlockTinOre();
+        blockCopper = new BlockDecorative("blockCopper");
+        blockTin = new BlockDecorative("blockTin");
 
     	GameRegistry.registerBlock(vdgGenerator, "vdgGenerator");
     	GameRegistry.registerBlock(teslaCoil, "teslaCoil");
@@ -36,12 +42,13 @@ public class TeslaBlocks
         GameRegistry.registerBlock(metalPlate, "metalPlate");
         GameRegistry.registerBlock(oreCopper, "oreCopper");
         GameRegistry.registerBlock(teslaBase, "teslaBase");
+        GameRegistry.registerBlock(oreTin, "oreTin");
+        GameRegistry.registerBlock(blockCopper, "blockCopper");
+        GameRegistry.registerBlock(blockTin, "blockTin");
 
     	GameRegistry.registerTileEntity(TileEntityVDGGenerator.class, "te_vdgGenerator");
     	GameRegistry.registerTileEntity(TileEntityTeslaCoil.class, "te_teslaCoil");
         GameRegistry.registerTileEntity(TileEntityPlasmaFurnace.class, "te_plasmaFurnace");
-
-        OreDictionary.registerOre("oreCopper", oreCopper);
 
     }
 }

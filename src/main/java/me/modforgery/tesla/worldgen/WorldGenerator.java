@@ -33,6 +33,7 @@ public class WorldGenerator implements IWorldGenerator {
     private void generateSurface(World world, Random random, int x, int z)
     {
         this.addOreSpawn(TeslaBlocks.oreCopper, world, random, x, z, 16, 16, 8, 5, 32, 64);
+        this.addOreSpawn(TeslaBlocks.oreTin, world, random, x, z, 8, 13, 8, 5, 42, 74);
     }
 
     private void generateNether(World world, Random random, int x, int z)
