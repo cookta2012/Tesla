@@ -9,11 +9,11 @@ import net.minecraft.item.Item;
  * Created by xbony2 for ModForgery :p
  * May they distribute this code forever
  */
-public class CopperIngot extends Item{
-    public CopperIngot(){
+public class CraftingItem extends Item{
+    public CraftingItem(String unlocalizedName){
         super();
         this.setCreativeTab(CreativeTabTesla.TS_TAB);
-        this.setUnlocalizedName("copper_ingot");
-        this.setTextureName("tesla:copper_ingot");
+        this.setUnlocalizedName(unlocalizedName);
+        this.setTextureName("tesla:" + unlocalizedName);
     }
 }
